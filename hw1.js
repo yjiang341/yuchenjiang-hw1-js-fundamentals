@@ -75,4 +75,26 @@ function countVowels(str) {
 const myString = "Hello"
 console.log("Testing capitalize: " + capitalize(myString) + "\n")
 console.log("Testing reverse: " + reverse(myString) + "\n")
-console.log("Testing countVowels: " + countVowels(myString) + "\n")
+console.log("Testing countVowels: " + countVowels(myString) + "\n\n")
+
+//-------------------------------------------------------------------------------
+//Part 3: Objects
+
+//Creat Student object with following property:
+//name, age, grades.
+const student = {
+    name: "John Doe",
+    age: 24,
+    grades: [73, 85, 91],
+    getAverage: function(grades) {
+        return average(grades);
+    },
+    isHonorRoll: function(age) {
+        return age > 85;
+    }
+}
+
+console.log(student.name + " is " + student.age + " years old.\n");
+console.log(student.name + " has a average of " + student.getAverage(student.grades) + ".\n")
+console.log(student.name + " is " + (student.isHonorRoll(student.age) ?
+            "in honor roll." : "not in honor roll.") + "\n")
